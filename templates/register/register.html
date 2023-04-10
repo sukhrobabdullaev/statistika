@@ -7,12 +7,12 @@
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Font-->
-	<link rel="stylesheet" type="text/css" href="{% static 'register/css/nunito-font.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/register/css/nunito-font.css' %}">
 	<!-- Main Style Css -->
-    <link rel="stylesheet" href="{% static 'register/css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/register/css/style.css' %}"/>
 	<style>
 		.form-v9-content{
-background-image: url("{% static '/register/images/form-v9.jpg' %}");
+background-image: url("{% static 'css/register/images/form-v9.jpg' %}");
 		}
 	</style>
 </head>
@@ -23,11 +23,11 @@ background-image: url("{% static '/register/images/form-v9.jpg' %}");
 
 			<form class="form-detail"  method="post" action="#" method="post">
 				{% csrf_token %}
-				{{ form.as_p }}				<input type="submit">
-				<!-- <div class="form-row-last">
+				{{ form.as_p }}				
+				<div class="form-row-last">
 					<input type="submit" class="register" value="Register">
 					<a href="{% url 'login' %}"><input type="button" name="register" value="Login"></a>
-				</div> -->
+				</div>
 				
 			</form>
 

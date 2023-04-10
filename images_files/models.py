@@ -3,12 +3,12 @@ from account.models import Account
 from common.models import BaseModel
 # Create your models here.
 class ImageFile(BaseModel):
-    image_pdf=models.FileField()
+    image_pdf=models.FileField(upload_to='images_pdf')
     title=models.CharField(max_length=250,null=True,blank=True)
     name=models.CharField(max_length=50,null=True,blank=True)
 
     def __str__(self):
-        return str(self.name)
+        return  self.title
     class Meta:
             verbose_name='ImageFile'
             verbose_name_plural='ImageFiles'

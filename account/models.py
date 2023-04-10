@@ -2,7 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from common.choose import UserChoices
 from .manager import AccountManager 
+
 # Create your models here.
+
 class Account(AbstractUser):
     user=models.CharField(max_length=10,choices=UserChoices.choices,default=UserChoices.OWNER)
     username=models.CharField(max_length=50,unique=True)
@@ -25,6 +27,9 @@ class Account(AbstractUser):
     class Meta:
         verbose_name='Account'
         verbose_name_plural='Accounts'
+
+
+
         
     
     
